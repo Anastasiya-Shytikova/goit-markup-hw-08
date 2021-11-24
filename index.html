@@ -13,10 +13,12 @@
 
 <body class="body-index">
     <!--шапка сайта-->
+    <!--Лого-->
     <header class="header">
         <div class="container">
+            <!--Лого-->
             <nav class="header__nav">
-                <a href lang="en-us">
+                <a href lang="./index.html" class="logo">
                     <span class="header__nav-logo">Web</span><span class="header__nav-name">Studio</span>
                 </a>
                 <ul class="nav">
@@ -46,6 +48,13 @@
                 </svg> +38 096 111 11 11</a>
                 </li>
             </ul>
+            <!-- меню-бургер -->
+            <button type="button" class="mobile-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню" class="mobile-button__icon">
+                  <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
+                  <use class="icon-menu" href="./images/sprite.svg#icon-mobile-menu"></use>
+                </svg>
+              </button>
         </div>
     </header>
     <!-- содание сайта-->

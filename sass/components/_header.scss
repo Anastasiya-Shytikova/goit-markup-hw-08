@@ -38,6 +38,14 @@
     letter-spacing: 0.03em;
 }
 
+.logo {
+    @include font (700, 24px, 1.16);
+    text-decoration: none;
+    @media screen and (min-width: 1200px) {
+        @include font (700, 26px, 1.19);
+    }
+}
+
 
 /* NAV BLOCK START*/
 
@@ -106,12 +114,24 @@
 .link-icon {
     fill: currentColor;
     margin-right: 10px;
+    @media screen and (max-width: 767px) {
+        justify-content: center;
+    }
 }
 
 .contact {
     display: flex;
     align-items: center;
     margin-left: auto;
+    @extend %list;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-left: auto;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
 }
 
 .contact__item+.contact__item {
@@ -131,6 +151,9 @@
     &:hover {
         color: var(--color-link);
     }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-right: 8px;
+    }
 }
 
 .contact__item-tel {
@@ -146,5 +169,20 @@
     &:focus,
     &:hover {
         color: var(--color-link);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-right: 8px;
+    }
+}
+
+.contacts__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 16px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 10px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-right: 30px;
     }
 }
