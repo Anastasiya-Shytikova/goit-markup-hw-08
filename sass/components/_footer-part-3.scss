@@ -1,0 +1,133 @@
+.main-user-form .input-text {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    background: #FFFFFF;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.main-user-form input.input-text {
+    padding-left: calc(12px + 18px + 12px);
+}
+
+.input-icon {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+.user-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.phone-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.envelope-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.input-wrapper.user-aggrement {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-label.checkbox {
+    margin-bottom: 0;
+    margin-left: 24px;
+    text-transform: none;
+    font-style: normal;
+    font-weight: normal;
+    line-height: calc(var(--main-font-size) * 1.5);
+    letter-spacing: calc(var(--main-font-size) * 0.875 * 0.03);
+}
+
+.input-text:focus-within {
+    outline: transparent;
+    border-color: var(--color-link);
+}
+
+.input-text:focus-within+.input-icon .icon-svg {
+    fill: var(--color-link);
+}
+
+.main-user-form .input-text::placeholder {
+    --input-text-font-size: calc(var(--main-font-size) * 0.75);
+    font-size: var(--input-text-font-size);
+    line-height: calc(var(--main-font-size) * 0.875);
+    letter-spacing: calc(var(--input-text-font-size) * 0.03);
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.main-user-form .btn {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.input-text.email {
+    padding-left: 16px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 16px;
+    color: #f5f4fa;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.input-text::placeholder {
+    font-size: var(--main-font-size);
+    line-height: 20px;
+    letter-spacing: calc(var(--main-font-size) * 0.03);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.input-text.email:not(:placeholder-shown) {
+    border: 1px solid var(--color-link);
+}
+
+.input-label.small-top {
+    margin-bottom: 4px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #757575;
+    text-transform: capitalize;
+}
+
+.input-label.light {
+    color: #f5f4fa;
+}
+
+.email-form .btn {
+    display: flex;
+    align-items: center;
+}
+
+.icon-send {
+    fill: var(--color-text);
+    width: 24px;
+    height: 24px;
+}
+
+.submit-text+.icon-send {
+    margin-left: 10px;
+}

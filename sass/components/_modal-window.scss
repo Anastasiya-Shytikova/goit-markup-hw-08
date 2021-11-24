@@ -1,0 +1,203 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms linear, visibility 500ms linear;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 580px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 2;
+    padding: 40px;
+    transition: fill 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-block {
+    flex-grow: 2;
+}
+
+.form-card__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.email-form {
+    display: flex;
+    align-items: flex-end;
+}
+
+.input-wrapper label:hover {
+    cursor: pointer;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+.email-form .input-wrapper {
+    margin-right: 12px;
+}
+
+.main-user-form .input-area-wrapper,
+.main-user-form .input-wrapper {
+    position: relative;
+}
+
+.main-user-form .input-wrapper:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.main-user-form .input-wrapper.user-aggrement {
+    margin-bottom: 30px;
+}
+
+.input-area-wrapper input {
+    width: 100%;
+}
+
+.user-aggrement.checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.input-icon.checkbox-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--text);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.user-aggrement.checkbox+.checkbox-icon .icon-svg {
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-aggrement.checkbox:checked+.input-icon.checkbox-icon {
+    border: 2px solid var(--color-link);
+}
+
+.user-aggrement.checkbox:checked+.checkbox-icon .icon-svg {
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    fill: var(--color-text);
+    background-color: var(--color-link);
+}
+
+.input-wrapper label {
+    margin-bottom: 20px;
+    --footer-font-size: calc(var(--main-font-size) * 0.875);
+    font-style: normal;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: var(--footer-font-size);
+    line-height: var(--main-font-size);
+}
+
+.input-text {
+    background: transparent;
+    border-radius: 4px;
+    transition: border cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:focus-within {
+        border: 1px solid var(--color-link);
+        outline: 1px solid var(--color-link);
+    }
+}
+
+.modal__close-btn {
+    align-items: center;
+    position: absolute;
+    display: flex;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+    justify-content: center;
+    &:focus,
+    &:hover {
+        fill: var(--color-link);
+    }
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.close-btn:hover {
+    fill: var(--color-link);
+}
+
+.base-btn {
+    background-color: #188ce8;
+    color: var(--color-text);
+    text-align: center;
+    font-weight: bold;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 30px;
+    border: 0;
+    border-radius: 4px;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px 32px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        color: var(--color-text);
+        background-color: var(--color-link);
+    }
+}
+
+.label-link {
+    color: var(--color-link);
+}
