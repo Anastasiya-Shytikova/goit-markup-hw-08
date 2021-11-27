@@ -13,48 +13,51 @@
 
 <body class="body-index">
     <!--шапка сайта-->
-    <!--Лого-->
     <header class="header">
-        <div class="container">
-            <!--Лого-->
-            <nav class="header__nav">
-                <a href lang="./index.html" class="logo">
-                    <span class="header__nav-logo">Web</span><span class="header__nav-name">Studio</span>
-                </a>
-                <ul class="nav">
-                    <li class="nav__item">
-                        <a href="./index.html" class="nav__point nav__point-active"> Студия </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./portfolio.html" class="nav__point"> Портфолио </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#" class="nav__point"> Контакты </a>
-                    </li>
-                </ul>
-            </nav>
-            <ul class="contact">
-                <li class="contact__item">
-                    <a href="mailto:info@devstudio.com" class="contact__item-adress">
-                        <svg class="link-icon" width="16" height="11.2">
+        <div class="container main-nav">
+            <!-- Мобильное меню-бургер -->
+            <a href lang="en-us">
+                <span class="header__nav-logo">Web</span><span class="header__nav-name">Studio</span>
+            </a>
+
+
+            <button type="button" class="menu-toggle js-close-menu mobile-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню" class="mobile-button__icon">
+              <use class="icon-cross icon-burger" href="./img/svg/symbol-defs.svg#icon-close"></use>
+              <use class="icon-menu icon-burger" href="./img/svg/symbol-defs.svg#icon-burger"></use>
+            </svg>
+          </button>
+            <div class="menu-container" id="menu-container" data-menu>
+                <nav class="header__nav">
+
+                    <ul class="nav">
+                        <li class="nav__item">
+                            <a href="./index.html" class="nav__point nav__point-active"> Студия </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./portfolio.html" class="nav__point"> Портфолио </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__point"> Контакты </a>
+                        </li>
+                    </ul>
+                </nav>
+                <ul class="contact">
+                    <li class="contact__item">
+                        <a href="mailto:info@devstudio.com" class="contact__item-adress">
+                            <svg class="link-icon" width="16" height="11.2">
                   <use href="./img/svg/symbol-defs.svg#icon-envelope"></use>
                 </svg> info@devstudio.com
-                    </a>
-                </li>
-                <li class="contact__item">
-                    <a href="tel:+380961111111" class="contact__item-tel">
-                        <svg class="link-icon" width="10" height="14.94">
+                        </a>
+                    </li>
+                    <li class="contact__item">
+                        <a href="tel:+380961111111" class="contact__item-tel">
+                            <svg class="link-icon" width="10" height="14.94">
                   <use href="./img/svg/symbol-defs.svg#icon-Vector"></use>
                 </svg> +38 096 111 11 11</a>
-                </li>
-            </ul>
-            <!-- меню-бургер -->
-            <button type="button" class="mobile-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-                <svg width="40" height="40" aria-label="Переключатель мобильного меню" class="mobile-button__icon">
-                  <use class="icon-cross" href="./images/sprite.svg#icon-cross"></use>
-                  <use class="icon-menu" href="./images/sprite.svg#icon-mobile-menu"></use>
-                </svg>
-              </button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <!-- содание сайта-->
@@ -159,8 +162,19 @@
             <div class="team__container container">
                 <h2 class="section__team">Наша команда</h2>
                 <ul class="team-pfoto">
+
                     <li class="team-pfoto__item">
-                        <img src="./img/img.jpg" alt="Игорь Демьяненко" width="270" height="260" />
+                        <picture>
+                            <source srcset="./img/desktop/team-1-1200@1x.webp 1x, ./img/desktop/team-1-1200@2x.webp 2x" type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="./img/tablet/team-1-768@1x.webp 1x, ./img/tablet/team-1-768@2x.webp 2x" type="image/webp" media="(min-width: 768px)" />
+                            <source srcset="./img/mobile/team-1-480@1x.webp 1x, ./img/mobile/team-1-480@2x.webp 2x" type="image/webp" media="(max-width: 767px)" />
+
+                            <source srcset="./img/desktop/team-1-1200@1x.jpg 1x, ./img/desktop/team-1-1200@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="./img/tablet/team-1-768@1x.jpg 1x, ./img/tablet/team-1-768@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./img/mobile/team-1-480@1x.jpg 1x, ./img/mobile/team-1-480@2x.jpg 2x" media="(max-width: 767px)" />
+                            <img src="./img/desktop/team-1-1200@1x.jpg" loading="lazy" alt="Мужчина в очках и с бородой" title="Игорь Демьяненко" width="270" height="260" />
+                            <!-- <img src="./img/mobile/team-1-480@1x.jpg" loading="lazy" alt="Мужчина в очках и с бородой" title="Игорь Демьяненко" width="450" height="460" /> -->
+                        </picture>
                         <div class="team-pfoto__card">
                             <h3 class="team-pfoto__card-name">Игорь Демьяненко</h3>
                             <p class="team-pfoto__card-position">Product Designer</p>
@@ -198,7 +212,18 @@
 
                     </li>
                     <li class="team-pfoto__item">
-                        <img src="./img/img (1).jpg" alt="Ольга Репина" width="270" height="260" />
+                        <picture>
+                            <source srcset="./img/desktop/team-2-1200@1x.webp 1x, ./img/desktop/team-2-1200@2x.webp 2x" type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="./img/tablet/team-2-768@1x.webp 1x, ./img/tablet/team-2-768@2x.webp 2x" type="image/webp" media="(min-width: 768px)" />
+                            <source srcset="./img/mobile/team-2-480@1x.webp 1x, ./img/mobile/team-2-480@2x.webp 2x" type="image/webp" media="(max-width: 767px)" />
+
+                            <source srcset="./img/desktop/team-2-1200@1x.jpg 1x, ./img/desktop/team-2-1200@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="./img/tablet/team-2-768@1x.jpg 1x, ./img/tablet/team-2-768@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./img/mobile/team-2-480@1x.jpg 1x, ./img/mobile/team-2-480@2x.jpg 2x" media="(max-width: 767px)" />
+
+                            <img src="./img/desktop/team-2-1200@1x.jpg" loading="lazy" alt="Женщина-блондинка в очках и костюме" title="Ольга Репина" width="270" height="260" />
+                        </picture>
+                        <!-- <img src="./img/img (1).jpg" alt="Ольга Репина" width="270" height="260" /> -->
                         <div class="team-pfoto__card">
                             <h3 class="team-pfoto__card-name">Ольга Репина</h3>
                             <p class="team-pfoto__card-position">Frontend Developer</p>
@@ -237,7 +262,18 @@
 
                     </li>
                     <li class="team-pfoto__item">
-                        <img src="./img/img (2).jpg" alt="Николай Тарасов" width="270" height="260" />
+                        <picture>
+                            <source srcset="./img/desktop/team-3-1200@1x.webp 1x, ./img/desktop/team-3-1200@2x.webp 2x" type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="./img/tablet/team-3-768@1x.webp 1x, ./img/tablet/team-3-768@2x.webp 2x" type="image/webp" media="(min-width: 768px)" />
+                            <source srcset="./img/mobile/team-3-480@1x.webp 1x, ./img/mobile/team-3-480@2x.webp 2x" type="image/webp" media="(max-width: 767px)" />
+
+                            <source srcset="./img/desktop/team-3-1200@1x.jpg 1x, ./img/desktop/team-3-1200@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="./img/tablet/team-3-768@1x.jpg 1x, ./img/tablet/team-3-768@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./img/mobile/team-3-480@1x.jpg 1x, ./img/mobile/team-3-480@2x.jpg 2x" media="(max-width: 767px)" />
+
+                            <img src="./img/desktop/team-3-1200@1x.jpg" loading="lazy" alt="Мужчина в светлой рубашке" title="Николай Тарасов" width="270" height="260" />
+                        </picture>
+                        <!-- <img src="./img/img (2).jpg" alt="Николай Тарасов" width="270" height="260" /> -->
                         <div class="team-pfoto__card">
                             <h3 class="team-pfoto__card-name">Николай Тарасов</h3>
                             <p class="team-pfoto__card-position">Marketing</p>
@@ -274,7 +310,20 @@
                         </div>
                     </li>
                     <li class="team-pfoto__item">
-                        <img src="./img/img (3).jpg" alt="Михаил Ермаков" width="270" height="260" />
+
+                        <picture>
+                            <source srcset="./img/desktop/team-4-1200@1x.webp 1x, ./img/desktop/team-4-1200@2x.webp 2x" type="image/webp" media="(min-width: 1200px)" />
+                            <source srcset="./img/tablet/team-4-768@1x.webp 1x, ./img/tablet/team-4-768@2x.webp 2x" type="image/webp" media="(min-width: 768px)" />
+                            <source srcset="./img/mobile/team-4-480@1x.webp 1x, ./img/mobile/team-4-480@2x.webp 2x" type="image/webp" media="(max-width: 767px)" />
+
+                            <source srcset="./img/desktop/team-4-1200@1x.jpg 1x, ./img/desktop/team-4-1200@2x.jpg 2x" media="(min-width: 1200px)" />
+                            <source srcset="./img/tablet/team-4-768@1x.jpg 1x, ./img/tablet/team-4-768@2x.jpg 2x" media="(min-width: 768px)" />
+                            <source srcset="./img/mobile/team-4-480@1x.jpg 1x, ./img/mobile/team-4-480@2x.jpg 2x" media="(max-width: 767px)" />
+
+                            <img src="./img/desktop/team-4-1200@1x.jpg" loading="lazy" alt="Мужчина в очках, с бородой, в темной футболке" title="Михаил Ермаков" width="270" height="260" />
+                        </picture>
+
+                        <!-- <img src="./img/img (3).jpg" alt="Михаил Ермаков" width="270" height="260" /> -->
                         <div class="team-pfoto__card">
                             <h3 class="team-pfoto__card-name">Михаил Ермаков</h3>
                             <p class="team-pfoto__card-position">UI Designer</p>
@@ -355,7 +404,7 @@
                 </svg>
                         </a>
                     </li>
-                    <li class="company">
+                    <li class="clients__item">
                         <a href="" class="clients__link">
                             <svg width="106" height="60">
                   <use href="./img/svg/defs.svg#icon-Logo-5"></use>
@@ -520,7 +569,18 @@
             </div>
         </div>
     </div>
+    <script src="./js/script.js"></script>
     <script src="./js/modal.js"></script>
+    <!-- Скрипт для отправки данных с формы модального окна -->
+    <script>
+        (() => {
+            document.querySelector(".js-speaker-form").addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
+            });
+        })();
+    </script>
 </body>
 
 </html>

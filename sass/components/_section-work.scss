@@ -1,8 +1,8 @@
 .section__work {
-    color: var(--text);
+    color: $text;
     margin-bottom: 50px;
     font-size: 36px;
-    font-style: var(--font-style);
+    font-style: $font-style;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.03em;
@@ -12,6 +12,9 @@
 .work {
     padding-top: 94px;
     padding-bottom: 94px;
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
 }
 
 .our-works {
@@ -40,7 +43,7 @@
 }
 
 .our-works__link-text {
-    color: var(--color-text);
+    color: $color-text;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;

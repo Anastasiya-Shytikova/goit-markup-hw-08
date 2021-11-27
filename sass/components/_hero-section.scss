@@ -1,56 +1,81 @@
-        .hero.overlay {
-        max-width: 1600px;
-        margin-left: auto;
-        margin-right: auto;
-        background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/our_team.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        margin-top: 1px;
-        @media screen and (min-width: 768px) {}
-        @media screen and (min-aspect-ratio: 2) {
-            I background-image: url("./img/header-mob-bg.png") @media screen and (min-width: 1366px) {}
-        }
-        .hero {
-            background-color: #2f303a;
-            text-align: center;
-            padding-top: 200px;
-            padding-bottom: 200px;
-        }
-        .hero__title {
-            color: var(--color-text);
-            font-family: var(--font-family);
-            font-size: 44px;
-            font-style: var(--font-style);
-            font-weight: 900;
-            line-height: 1.4;
-            letter-spacing: 0.06em;
-            text-align: center;
-            max-width: 696px;
-            margin: 0 auto 30px;
-        }
-        .hero__button {
-            background-color: #188ce8;
-            color: var(--color-text);
-            text-align: center;
-            font-weight: 500;
-            font-family: inherit;
-            font-size: 16px;
-            line-height: 1.62;
-            display: inline-block;
-            border: 0;
-            border-radius: 4px;
-            display: flex;
-            margin: 0 auto;
-            padding: 10px 32px;
-            align-items: center;
-            text-align: center;
-            min-width: 200px;
-            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            &:hover,
-            &:focus {
-                cursor: pointer;
-                color: var(--color-text);
-                background-color: var(--color-link);
-            }
-        }
+// .hero.overlay {
+//     background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/our_team.jpg");
+// }
+.hero {
+    max-width: 1600px;
+    min-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #2f303a;
+    background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/mobile/hero-480@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+    //     background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/mobile/hero-480@2x.jpg);
+    // }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/tablet/hero-768@1x.jpg);
+        // @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+        //     background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero-768@2x.jpg);
+        // }
+    }
+    @media screen and (min-width: 1200px) {
+        background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../img/our_team.jpg");
+        // @media screen and (min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+        //     background-image: linear-gradient( to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/desktop/hero-1200@2x.jpg);
+        // }
+    }
+}
+
+.hero__title {
+    color: $color-text;
+    font-family: $font-family;
+    font-size: 44px;
+    font-style: $font-style;
+    font-weight: 900;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    text-align: center;
+    max-width: 696px;
+    margin: 0 auto 30px;
+    @media screen and (min-width: 1200px) {}
+}
+
+.hero__container {
+    max-width: 360px;
+    padding: 118px 0;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+        max-width: 696px;
+        padding: 200px 0;
+    }
+}
+
+.hero__button {
+    background-color: #188ce8;
+    color: $color-text;
+    text-align: center;
+    font-weight: 500;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.62;
+    display: inline-block;
+    border: 0;
+    border-radius: 4px;
+    display: flex;
+    margin: 0 auto;
+    padding: 10px 32px;
+    align-items: center;
+    text-align: center;
+    min-width: 200px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        color: $color-text;
+        background-color: $color-link;
+    }
+}

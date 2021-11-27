@@ -3,9 +3,11 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-    width: 270px;
     height: 120px;
     background-color: #f5f4fa;
+    @media screen and (min-width: 768px) {
+        width: 270px;
+    }
 }
 
 .advantage__section-icon {
@@ -15,40 +17,70 @@
 
 .advantage__section {
     padding-bottom: 0px;
-    display: flex;
     margin-left: -30px;
     margin-top: -30px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: 1200px) {
+        display: flex;
+    }
 }
 
 .advantage__section-point {
     flex-basis: calc(100% / 4 - 30px);
     margin-left: 30px;
-    margin-top: 30px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        width: calc((100% - 1 * 30px) / 2);
+        &:not(:nth-last-child(-n + 2)) {
+            margin-bottom: 30px;
+        }
+        &:not(:nth-child(2n)) {
+            margin-right: 30px;
+        }
+    }
 }
 
 .advantage {
     padding-top: 94px;
+    @media screen and (max-width: 1199px) {
+        padding-bottom: 60px;
+    }
 }
 
 .advantage__section-title {
-    color: var(--text);
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    font-style: var(--font-style);
+    color: $text;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-style: $font-style;
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: 0.03em;
     margin-bottom: 10px;
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+    @media screen and (max-width: 768px) {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+    }
 }
 
 .advantage__section-text {
-    color: var(--color-p);
-    font-family: var(--font-family);
-    font-size: var(--font-size);
-    font-style: var(--font-style);
+    color: $color-p;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-style: $font-style;
     font-weight: 400;
     line-height: 1.7;
     letter-spacing: 0.03em;
     font-weight: 700;
     font-size: 14px;
+    @media screen and (max-width: 768px) {
+        margin-bottom: 30px;
+    }
 }
