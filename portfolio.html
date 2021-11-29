@@ -21,7 +21,7 @@
                 <span class="header__nav-logo">Web</span><span class="header__nav-name">Studio</span>
             </a>
             <button type="button" class="menu-toggle js-close-menu mobile-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-            <svg width="40" height="40" aria-label="Переключатель мобильного меню" class="mobile-button__icon">
+            <svg width="24" height="16" aria-label="Переключатель мобильного меню" class="mobile-button__icon">
               <use class="icon-cross icon-burger" href="./img/svg/symbol-defs.svg#icon-close"></use>
               <use class="icon-menu icon-burger" href="./img/svg/symbol-defs.svg#icon-burger"></use>
             </svg>
@@ -88,9 +88,9 @@
                                     Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.
                                 </p>
                             </div>
-                            <div class="card__info-wrapper">
+                            <div class="card__info-wrapper ">
                                 <h3>Технокряк</h3>
-                                <p class="projects__item-description-type">Веб-сайт</p>
+                                <p class="projects__item-description-type margin-wrapper">Веб-сайт</p>
                             </div>
                         </a>
                     </li>
@@ -213,6 +213,7 @@
     <!--Контактные данные портфолио-->
     <footer class="footer">
         <div class="container container--flex">
+
             <div class="footer-item">
                 <a href lang="en-us">
                     <span class="footer-logo">Web</span><span class="name-footer">Studio</span>
@@ -233,6 +234,7 @@
           </ul>
         </address>
             </div>
+
             <div class="footer-block footer-block--socials">
 
                 <p class="studio-socials__title">присоединяйтесь</p>
@@ -268,19 +270,23 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer-submit">
-                <b class="footer-submit__title">подписаться на рассылку</b>
-                <form class="js-speaker-form">
-                    <input type="email" name="mail" placeholder="E-mail" />
-                    <button type="submit" class="footer-submit_button">
-                    Подписаться<svg class="send">
-                      <use href="./img/svg/symbol-defs.svg#icon-icon-send"></use>
-                    </svg>
-                  </button>
-                </form>
-            </div>
 
+            <form name="user-email-form" class="footer-email-form">
+                <div class="footer-submit">
+                    <b class="footer-submit__title">подписаться на рассылку</b>
+                    <input type="email" name="mail" placeholder="E-mail" class="footer-submit__title-center" />
+                </div>
+
+                <button type="submit" class="footer-submit_button">
+                Подписаться
+                <svg class="send">
+                  <use href="./img/svg/symbol-defs.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </form>
         </div>
+
+
     </footer>
     <script src="./js/script.js"></script>
     <script src="./js/modal.js"></script>

@@ -40,6 +40,12 @@
     max-width: 696px;
     margin: 0 auto 30px;
     @media screen and (min-width: 1200px) {}
+    @media screen and (max-width: 768px) {
+        font-size: 26px;
+        line-height: 42px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
 }
 
 .hero__container {
@@ -77,5 +83,9 @@
         cursor: pointer;
         color: $color-text;
         background-color: $color-link;
+    }
+    @media screen and (max-width: 768px) {
+        width: 200px;
+        height: 50px;
     }
 }
