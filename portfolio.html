@@ -17,7 +17,7 @@
     <header class="header">
         <div class="container main-nav">
             <!-- Мобильное меню-бургер -->
-            <a href lang="en-us">
+            <a href lang="en-us" class="logo-and-name">
                 <span class="header__nav-logo">Web</span><span class="header__nav-name">Studio</span>
             </a>
             <button type="button" class="menu-toggle js-close-menu mobile-button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
@@ -40,22 +40,39 @@
                         </li>
                     </ul>
                 </nav>
-                <ul class="contact">
-                    <li class="contact__item">
+                <ul class="contact" id="mobile-nav">
+                    <li class="contact__item" id="mailto">
                         <a href="mailto:info@devstudio.com" class="contact__item-adress">
                             <svg class="link-icon" width="16" height="11.2">
                   <use href="./img/svg/symbol-defs.svg#icon-envelope"></use>
                 </svg> info@devstudio.com
                         </a>
                     </li>
-                    <li class="contact__item">
+                    <li class="contact__item" id="tel">
                         <a href="tel:+380961111111" class="contact__item-tel">
                             <svg class="link-icon" width="10" height="14.94">
                   <use href="./img/svg/symbol-defs.svg#icon-Vector"></use>
                 </svg> +38 096 111 11 11</a>
                     </li>
                 </ul>
+                <!-- мобильное меню -->
+                <ul class="heder__sociale-mobile" id="top-menu">
+                    <li class="socials_mobile-point">
+                        <a href="Instagram">Instagram</a>
+                    </li>
+                    <li class="socials_mobile-point">
+                        <a href="Twitter">Twitter</a>
+                    </li>
+                    <li class="socials_mobile-point">
+                        <a href="Facebook">Facebook</a>
+                    </li>
+                    <li class="socials_mobile-point">
+                        <a href="LinkedIn">LinkedIn</a>
+                    </li>
+
+                </ul>
             </div>
+        </div>
     </header>
     <!-- содание сайта-->
     <main>

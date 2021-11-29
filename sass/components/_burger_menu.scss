@@ -47,7 +47,7 @@
             top: 100%;
             left: 0;
             width: 100%;
-            padding: 60px 0;
+            padding: 0 0 48px;
             background-color: $color-text;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
             z-index: 999;
@@ -69,11 +69,32 @@
             padding-bottom: 12px;
             font-size: 40px;
             line-height: 47px;
+            margin-left: 25px;
         }
         @media screen and (min-width: 768px) {
             padding-top: 32px;
             padding-bottom: 32px;
             font-size: 14px;
             line-height: 1.14;
+        }
+    }
+    
+    .socials_mobile-point {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+    }
+    
+    .logo-and-name {
+        @media screen and (max-width: 768px) {
+            padding-top: 16px;
+            padding-bottom: 16px;
+        }
+    }
+    
+    .menu-container is-open {
+        .logo-and-name {
+            text-decoration: none;
         }
     }
