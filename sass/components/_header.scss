@@ -4,12 +4,12 @@
                                                     top: 0;
                                                     width: 100%;
                                                     background-color: $color-text;
-                                                    z-index: 1;
                                                 }
                                             }
                                             
                                             .header .container {
                                                 justify-content: space-between;
+                                                @media screen and (min-width: 320px) {}
                                             }
                                             
                                             .header {
@@ -34,8 +34,8 @@
                                             }
                                             
                                             .contact {
-                                                @media screen and (max-width: 767px) {
-                                                    padding-top: 100px;
+                                                @media screen and (min-width: 767px) and (max-width: 1199px) {
+                                                    // padding-top: 100px;
                                                     //display: none;
                                                     // position: absolute;
                                                     // bottom: 10px;
@@ -56,7 +56,7 @@
                                                         margin-bottom: 0;
                                                     }
                                                     display: flex;
-                                                    position: absolute;
+                                                    // position: absolute;
                                                     right: 100px
                                                 }
                                             }
@@ -250,6 +250,7 @@
                                                 }
                                                 @media screen and (max-width: 768px) {
                                                     margin-left: 40px;
+                                                    padding: 0;
                                                 }
                                             }
                                             
@@ -269,6 +270,7 @@
                                                     display: inline;
                                                     border-right: 1px solid rgba(33, 33, 33, 0.2);
                                                     width: 22px;
+                                                    margin-left: -10px;
                                                 }
                                                 #top-menu li:last-child {
                                                     border-right: none
@@ -297,7 +299,7 @@
                                                 @media screen and (max-width: 768px) {
                                                     font-size: 24px;
                                                     line-height: 28px;
-                                                    margin-left: 40px;
+                                                    margin-left: 30px;
                                                 }
                                             }
                                             
@@ -334,9 +336,9 @@
                                                     margin-right: 8px;
                                                 }
                                                 @media screen and (max-width: 768px) {
-                                                    font-size: 34px;
+                                                    font-size: 28px;
                                                     line-height: 40px;
-                                                    margin-left: 10px;
+                                                    // margin-left: 10px;
                                                 }
                                             }
                                             
