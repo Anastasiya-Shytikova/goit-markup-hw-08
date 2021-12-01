@@ -103,6 +103,7 @@ header {
     top: 0;
     width: 100%;
     background-color: #ffffff;
+    z-index: 999;
   }
 }
 
@@ -142,6 +143,7 @@ header {
     background-image: url("./img/tabl-img-overlay-x2.png");
   }
 }
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .contact {
     position: absolute;
@@ -1649,6 +1651,7 @@ header {
   transition: all 250ms ease;
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
+  z-index: 1000;
 }
 
 .modal {
@@ -1680,6 +1683,11 @@ header {
           transform: rotate(0) scale(1) translateY(0);
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
+}
+@media screen and (max-width: 330px) {
+  .modal-form-box {
+    padding: 10px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -2026,6 +2034,7 @@ header {
 
 .menu-container.is-open {
   display: block;
+  overflow: hidden;
 }
 @media screen and (max-width: 767px) {
   .menu-container {

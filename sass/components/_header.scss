@@ -4,6 +4,7 @@
                                                     top: 0;
                                                     width: 100%;
                                                     background-color: $color-text;
+                                                    z-index: 999;
                                                 }
                                             }
                                             
@@ -30,7 +31,6 @@
                                                 @media screen and ( min-device-pixel-ratio: 2) {
                                                     background-image: url("./img/tabl-img-overlay-x2.png");
                                                 }
-                                                @media screen and (min-width: 1366px) {}
                                             }
                                             
                                             .contact {
